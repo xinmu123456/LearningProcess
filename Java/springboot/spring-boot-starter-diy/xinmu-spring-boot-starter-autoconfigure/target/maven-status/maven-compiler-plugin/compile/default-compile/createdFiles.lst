@@ -1,0 +1,4 @@
+com\xinmu\HelloService.class
+com\xinmu\HelloProperties.class
+com\xinmu\HelloServiceAutoConfiguration.class
+META-INF\spring-configuration-metadata.json

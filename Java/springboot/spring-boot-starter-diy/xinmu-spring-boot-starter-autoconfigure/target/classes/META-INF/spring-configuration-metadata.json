@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "xinmu.hello",
+      "type": "com.xinmu.HelloProperties",
+      "sourceType": "com.xinmu.HelloProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "xinmu.hello.prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.xinmu.HelloProperties"
+    },
+    {
+      "name": "xinmu.hello.suffix",
+      "type": "java.lang.String",
+      "sourceType": "com.xinmu.HelloProperties"
+    }
+  ],
+  "hints": []
+}
