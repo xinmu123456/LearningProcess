@@ -54,3 +54,15 @@ def add(x, y):
 
 l = reduce(lambda x, y: x + y, [1, 2, 3])
 print(l)
+
+
+for i in range(10, 1, -1):
+    print(i, end='')
+
+
+l = [1, 2, 3, 4, 5]
+
+print(l[::-2])
+
+for i in range(1, 10, 2):
+    print(i)

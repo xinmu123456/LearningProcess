@@ -22,15 +22,13 @@ s = Student()
 s.score = 66
 print(s.score)
 
-s.score = 999
-
 
 class Student(object):
-    
+
     @property
     def birth(self):
         return self._birth
-    
+
     @birth.setter
     def birth(self, value):
         self._birth = value
@@ -38,30 +36,37 @@ class Student(object):
     @property
     def age(self):
         return 2022 - self.birth
-    
-    
+
 
 class Screen(object):
     def __init__(self) -> None:
         pass
-    
+
     @property
     def width(self):
         return self._width
-    
+
     @width.setter
     def width(self, value):
         self._width = value
-    
+
     @property
     def height(self):
         return self._height
-    
+
     @height.setter
     def height(self, value):
         self._height = value
-        
+
     @property
     def resolution(self):
         return self._width * self._height
-    
+
+
+s = Screen()
+
+s.height = 10
+
+s.width = 5
+
+print(s.resolution)
