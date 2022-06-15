@@ -1,4 +1,4 @@
-package com.xinmu;
+package com.xinmu.demo01;
 
 /**
  * author: xinmu
@@ -11,6 +11,7 @@ public class LoopPrintDemo {
     public static void main(String[] args) {
 
         Flag flag = new Flag(0);
+        System.out.println(flag.hashCode());
 
         ThreadA threadA = new ThreadA(flag);
         ThreadB threadB = new ThreadB(flag);
@@ -25,30 +26,18 @@ class ThreadA extends Thread{
 
     public ThreadA(Flag flag){
         this.flag = flag;
+        System.out.println(this.flag.hashCode());
     }
 
     @Override
     public void run() {
-
-
-
-        while (true){
-            for (int i = 0; i < 26; i++) {
-                System.out.print((char)( i +'a'));
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
+        for (int j = 0; j < 10; j++) {
             try {
                 flag.change2PrintNum();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-
     }
 }
 
@@ -58,29 +47,18 @@ class ThreadB extends Thread{
 
     public ThreadB(Flag flag){
         this.flag = flag;
+        System.out.println(this.flag.hashCode());
     }
 
     @Override
     public void run() {
-
-
-        while (true){
-            for (int i = 0; i < 10; i++) {
-                System.out.print(i);
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+        for (int j = 0; j < 10; j++) {
             try {
                 flag.change2PrintChar();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
         }
-
     }
 }
 
@@ -92,23 +70,35 @@ class Flag {
     }
 
     public synchronized void change2PrintNum() throws InterruptedException {
-        if (flag == 1){
-            wait();
+        while (this.flag != 0){
+            this.wait();
             System.out.println("打印字符线程 flag: " + flag);
             System.out.println("打印字符线程阻塞");
         }
-        flag = 0;
-        notify();
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i);
+            if (i == 9){
+                System.out.println();
+            }
+        }
+        flag = 1;
+        this.notify();
     }
 
     public synchronized void change2PrintChar() throws InterruptedException {
-        if (flag == 0){
-            wait();
+        while (this.flag != 1){
+            this.wait();
             System.out.println("打印数字线程 flag: " + flag);
             System.out.println("打印数字线程阻塞");
         }
-        flag = 1;
-        notify();
+        for (int i = 0; i < 26; i++) {
+            System.out.print((char)( i +'a'));
+            if (i == 25){
+                System.out.println();
+            }
+        }
+        flag = 0;
+        this.notify();
     }
 
 }

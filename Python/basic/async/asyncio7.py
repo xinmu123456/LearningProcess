@@ -10,7 +10,7 @@ async def say_after(delay, what):
 
 
 async def main():
-    print(f"started at {time.strftime('%X')}")
+    print(f"started at {time.strftime('%X')}")  
 
     await say_after(1, 'hello')
     await say_after(2, 'world')

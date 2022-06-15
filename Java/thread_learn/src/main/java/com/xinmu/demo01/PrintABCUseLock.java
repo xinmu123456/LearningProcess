@@ -1,4 +1,4 @@
-package com.xinmu;
+package com.xinmu.demo01;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

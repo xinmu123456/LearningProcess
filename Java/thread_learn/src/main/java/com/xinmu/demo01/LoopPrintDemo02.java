@@ -1,4 +1,4 @@
-package com.xinmu;
+package com.xinmu.demo01;
 
 /**
  * author: xinmu
