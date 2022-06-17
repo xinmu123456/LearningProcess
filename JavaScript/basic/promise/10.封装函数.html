@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function getData(url, data = {}) {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+                    data: data,
+                    success: function (res) {
+                        //修改promise的状态为成功, 并且保存结果
+                        resolve(res)
+                    },
+                    error: function (res) {
+                        //修改promise的状态为失败, 并且修改结果
+                        reject(res)
+                    }
+                })
+            })
+        }
+        getData('data1.json')
+            .then((data) => {
+                const { id } = data
+                return getData('data2.json', { id })
+            })
+            .then((data) => {
+                const { username } = data
+                return getData('data8.json', { username })
+            })
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    </script>
+</body>
+
+</html>

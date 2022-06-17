@@ -19,7 +19,9 @@ public class SaleTicketDemo02 {
                 ticket.sale();
             }
         }, "A").start();
+        new Thread(()-> {
 
+        });
         new Thread(()->{
             for (int i = 0; i < 40; i++) {
                 ticket.sale();

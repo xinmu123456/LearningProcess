@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //如果promise的状态不改变, then里面的方法不会执行
+    const p1 = new Promise((resolve, reject) => {
+        resolve()
+    })
+    p1.then(value => {
+        //使用return 可以将t实例的状态改为fulfilled
+        console.log('成功', value)
+        console.log(a);
+        return 123
+    }, reason => console.log('失败'))
+        .then(value => {
+            console.log('成功', value)
+        }, reason => console.log('失败'))
+</script>
+
+</html>

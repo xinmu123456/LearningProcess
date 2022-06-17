@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            reject('err')
+            resolve('ok')
+        })
+
+        p.then((value) => { console.log('成功时调用', value) }, (err) => { console.log('失败调用', err) })
+
+        console.dir(p);
+
+        const p1 = new Promise((resolve, reject) => {
+            $.ajax({
+                type: "GET",
+                url: './data1.json',
+                success: (res) => {
+                    resolve(res)
+                },
+                error: (res) => {
+                    reject(res)
+                }
+            })
+        })
+        p1.then(v => console.log('success', v), err => console.log('error', err.message))
+
+    </script>
+</body>
+
+</html>

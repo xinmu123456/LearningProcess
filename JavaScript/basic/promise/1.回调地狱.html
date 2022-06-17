@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+        //发送ajax请求
+        $.ajax({
+            type: 'GET',
+            url: './data1.json',
+            success: function (res) {
+                const { id } = res
+                console.log(id);
+                $.ajax({
+                    type: 'GET',
+                    url: './data2.json',
+                    data: { id },
+                    success: function (res) {
+                        console.log(res);
+                        const { username } = res
+                        $.ajax({
+                            type: 'GET',
+                            url: './data3.json',
+                            data: { username },
+                            success: function (res) {
+                                console.log(res);
+                            }
+                        })
+                    }
+                })
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
