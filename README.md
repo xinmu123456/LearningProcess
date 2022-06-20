@@ -1,2 +1,2 @@
 # LearningProcess
-Computer science learning process
+Computer Science learning process
