@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        // function Student(name) {
+        //     this.name = name;
+        // }
+
+
+        class Student {
+
+            constructor(name) {
+                this.name = name;
+            }
+
+            hello(){
+                alert(this.name+ 'hello');
+            }
+
+        }
+
+        class xiaoStudent extends Student {
+
+            constructor(name,grade) {
+                super(name);
+                this.grade = grade;
+            }
+            myGrade(){
+                alert('我是小学生')
+            }
+
+        }
+        var xiaoming=new Student('xiaoming');
+        var xiaohong=new xiaoStudent('xiaohong',1);
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+    function getAge() {
+        //今年-出生的年
+        var now=new Date().getFullYear();
+        return now-this.birth;
+
+    }
+
+    var xinmu={
+        name:"xinmu",
+        birth:2002,
+        age:getAge
+
+    }
+
+
+    getAge.apply(xinmu,[]);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

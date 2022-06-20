@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="md-5.js"></script>
+</head>
+<body>
+
+<!--表单绑定提交事件
+    onsubmit=绑定一个提交检测的函数,true,false
+    将这个结果返回给表单,使用onsubmit 接收!
+    onsubmit="return aaa()"
+-->
+<form method="post" action="#" onsubmit="return aaa()">
+    <p>
+        <span>用户名:</span> <input type="text" id="username" name="username">
+    </p>
+    <p>
+        <span>密&nbsp;&nbsp;&nbsp;码:</span> <input type="password" id="input-password" >
+    </p>
+
+    <input type="hidden" id="md5-password" name="password">
+
+    <!-- 绑定时间   onclick 被点击    -->
+    <button type="submit" onclick="aaa()"> 提交</button>
+
+</form>
+
+<script>
+    function aaa() {
+        var username= document.getElementById('username');
+        var pwd=document.getElementById('password');
+        var md5pwd=document.getElementById('md5pwd');
+        console.log(username);
+        console.log(pwd);
+
+        md5pwd.value=md5(pwd.value);
+
+        //可以校验判断提交内容
+        return false;
+    }
+</script>
+</body>
+</html>

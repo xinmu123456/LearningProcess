@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册</title>
+</head>
+<body>
+
+<h1>注册</h1>
+
+<!--表单form
+
+action:表单提交的位置,可以时网站,页可以是一个请求处理地址
+method:post,get 提交方式
+    get方式提交:我们可以在url中看到我们提交的信息,不安全,但是比较高效
+    post:比较安全,并且可以传输大文件
+-->
+
+<form action="1.我的第一个网页.html" method="get">
+    <!--文本输入框: input type="text
+    value       默认初始值
+    maxlength   最长能写几个字符
+    size        文本框长度
+
+    -->
+    <p>名字: <input type="text" name="username" placeholder="请输入用户名" maxlength="8" size="30" required></p>
+    <!--密码框 : input type =" password" -->
+    <p>密码: <input type="password" name="password" hidden value="123456"></p>
+
+
+
+    <p>性别:
+        <label>
+            <input type="radio" value="boy" name="sex"/>
+        </label>男
+        <label>
+            <input type="radio" value="girl" name="sex"/>
+        </label>女
+    </p>
+
+    <!--多选框
+    input type="checkbox"
+    -->
+    <p>爱好:
+        <input type="checkbox" value="sleep" name="hobby"/>睡觉
+        <input type="checkbox" value="code" name="hobby"/>敲代码
+        <input type="checkbox" value="chat" name="hobby"/>聊天
+        <input type="checkbox" value="game" name="hobby"/>游戏
+    </p>
+
+    <p>按钮:
+        <input type="button" value="点击" name="btn1"/>
+<!--        <input type="image" src="../resources/image/battlefield.jpeg" height="300" width="200" />-->
+    </p>
+
+    <!--下拉框 ，列表框-->
+    <p>下拉框
+        <select name="列表名称" >
+            <option value="ch">中国</option>
+            <option value="us">美国</option>
+            <option value="ru">俄国</option>
+            <option value="br">英国</option>
+        </select>
+    </p>
+
+    <!--文本域
+    -->
+    <p>反馈:
+        <textarea name="textarea" rows="10" cols="10" id="textarea">文本</textarea>
+    </p>
+
+    <!--文件域    -->
+    <p>
+        <input type="file" name="file">
+        <input type="button" value="上传" name="upload">
+    </p>
+
+    <p>邮箱验证:
+        <input type="email" name="email" >
+    </p>
+
+    <!-- url  -->
+    <p>URL:
+        <input type="url" name="url" >
+    </p>
+    <!--  数字  -->
+    <p>数字:
+        <input type="number" name="num" max="100" min="0" value="0" step="1" />
+    </p>
+
+    <!-- 滑块  -->
+    <p>滑块:
+        <input type="range" name="voice" max="100" min="0" step="1" />
+    </p>
+    <!--搜索框-->
+    <p>搜索:
+        <input type="search" name="search">
+    </p>
+
+
+    <!--增强鼠标可用性-->
+    <p>
+        <label for="mark">点我</label>
+        <input type="text" id="mark">
+    </p>
+    
+    <p>自定义邮箱:
+        <input type="text" name="diymail" pattern="^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$ ">
+        
+    </p>
+
+
+    <p><input type="submit"> <input type="reset" value="重置表单"></p>
+</form>
+</body>
+</html>
