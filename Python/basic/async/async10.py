@@ -4,12 +4,13 @@ import time
 
 async def fetch(msg):
     await asyncio.sleep(2)
-    print(f'{msg}已经ok')
+    print(f'{msg}已经请求到')
     return "hello" + msg
 
 
 async def save():
     await asyncio.sleep(1)
+    print('save successfully')
     return "save successfully"
 
 
