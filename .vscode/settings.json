@@ -3,5 +3,8 @@
         "arange",
         "multicore",
         "pygame"
-    ]
+    ],
+    "files.associations": {
+        "string": "cpp"
+    }
 }
