@@ -16,6 +16,7 @@ void displayPoint(const Point& p)
 
 int main()
 {
-    displayPoint(1);
-    Point p = 1;
+    
+    // displayPoint(1);
+    // Point p = 1;
 }
