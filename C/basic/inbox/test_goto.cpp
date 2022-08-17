@@ -15,9 +15,9 @@ public:
 
 class C : public B{
 
-    void temp()override{
-        get();
-    }
+    // void temp() override{
+    //     get();
+    // }
 
     void get(){};
 };
