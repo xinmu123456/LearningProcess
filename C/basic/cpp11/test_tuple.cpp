@@ -2,6 +2,11 @@
 #include <iostream>
 using std::tuple;
 
+int add(int x, int y)
+{
+    return x + y;
+}
+
 int main(int argc, char const *argv[])
 {
 
@@ -12,7 +17,11 @@ int main(int argc, char const *argv[])
     printf("%d\n", std::get<0>(t));
 
     auto _t = std::make_tuple(1, 'a');
-    printf("%d", std::get<0>(_t));
+    printf("%d\n", std::get<0>(_t));
+
+    int (*func)(int, int) = add;
+    int ans = (*func)(1, 2);
+    printf("%d\n", ans);
 
     return 0;
 }
