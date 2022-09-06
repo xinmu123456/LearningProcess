@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
     u |= (0b11111111);
     printf("%d\n", u);
 
-    //------------
+    //-------------
     u = 0b11111111;
     u &= 0;
     printf("%d\n", u);
