@@ -18,8 +18,14 @@ int main(int argc, char const *argv[])
         std::shared_ptr<A> p3(p2);
         std::shared_ptr<A> p4 = std::make_shared<A>(1);
         // std::cout << p1->a << std::endl;
-        printf("%d\n", p4->a);
-        // printf("%d\n", p2.use_count());
+
+        // dsaf
+        // dsaf
+        // dsaf
+        // dsaf
+
+
+
     }
 
     printf("outside\n");
