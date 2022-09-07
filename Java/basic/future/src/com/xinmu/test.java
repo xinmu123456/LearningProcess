@@ -30,5 +30,8 @@ public class test {
         final Integer i = Integer.valueOf(1);
         final Dog d = new Dog();
         d.data = 2;
+        while(true){
+            System.out.println(d.data);
+        }
     }
 }
