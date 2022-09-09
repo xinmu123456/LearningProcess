@@ -16,9 +16,19 @@ void show(int arr[5][5]){
 
 }
 
+struct A
+{
+    int data;
+    int flag;
+};
+
+
 int main(int argc, char **argv)
 {
-    
+    struct A a = {.data = 1, .flag = 2};
+    struct A a_ = {data : 1, flag : 2};
+    struct A a__ = {1};
+    struct A _a = {_a.flag = 2, _a.data = 1};
     int arr[5][5] = {0};
     // show(arr);
     // argv = argv + 1;
