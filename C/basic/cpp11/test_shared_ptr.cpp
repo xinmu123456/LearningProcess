@@ -24,6 +24,8 @@ int main(int argc, char const *argv[])
         // dsaf
         // dsaf
 
+        printf("%d\n", p2.use_count());
+        printf("%d\n", p2.unique());
 
 
     }

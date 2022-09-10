@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <iostream>
 
 int main(void)
 {
@@ -15,6 +16,7 @@ int main(void)
         k += s;
     }
 
-    
+    const int& j = std::move(m);
+
     printf("%d", k);
 }
