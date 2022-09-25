@@ -9,15 +9,15 @@ public class TestBufferRead {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 
-        //String str = br.readLine();
+        String str = br.readLine();
 
-        //System.out.println(str);
+        System.out.println(str);
 
-        //int read = br.read();
+        int read = br.read();
+        System.out.println(read);
+        char[] chars = new char[100];
 
-        //char[] chars = new char[100];
-
-        //br.read(chars, 0, 4);
+        br.read(chars, 0, 4);
 
         //System.out.println(read);
         //System.out.print(chars);
