@@ -1,4 +1,4 @@
-#include <iostream>
+#include <cstdio>
 
 int fn(int x, int y) {
     return x + y;
