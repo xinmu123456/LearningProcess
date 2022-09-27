@@ -10,12 +10,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class AddTask {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         long start = System.currentTimeMillis();
         int n = 100;
         CountDownLatch latch = new CountDownLatch(2);
         ReentrantLock reentrantLock = new ReentrantLock();
-
         LinkedList<Integer> ans = new LinkedList<>();
 
         Thread t1 = new Thread(new Task(1, n / 2, latch, ans, reentrantLock));
