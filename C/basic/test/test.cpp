@@ -9,7 +9,8 @@ public:
 };
 
 
-int main(void) {
+int main(int args, char* argv[]) {
+    cout << *argv << endl;
     int i = 0;
     int&& a = i++;
     a = 10;
