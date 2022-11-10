@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 
 
 public class Hello {
+
     private int data;
     void test() {
         System.out.println("aop正常使用");
